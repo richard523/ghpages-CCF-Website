@@ -1,0 +1,32 @@
+![alt text](Assets/amir-abbas-abdolali-_Tm4622z4Dg-unsplash-1200x856.jpg)
+
+# Would an Upload Be Me, or Just a Copy; Who is the Real Me?
+
+**An Opinion Response by Michael Ulrich**
+
+
+
+For this question, the answer considers the constraints and definition of personal identity.
+
+Consider the implications, every copy has, at some point, the same mental information that is unique to your brain’s origination. At the instant a copy is set into existence, it takes on a worldly experience of its own that is different from the other copies up to the point of identity branching. By this they are different, but they have the same point of branching from one form of mental information.
+
+If personal identity has no bias against copies, so long as they have the same mental information at the point of branching from the originating mind, then all copies can be considered “you.”
+
+This does not hold up if there are additional continuity constraints required for every copy to be considered the same “you.” For example, if spatial continuity is a considered necessary continuity, then information must also have some form of definitive spatial volume that cannot be hindered. If an originating brain is scanned of information and the information is then used to construct an emulation of the originating brain the emulated brain would lack a continuity of spatial volume in comparison to the original brain from before to after the procedure.
+
+There are issues with claiming that any “copy” of an individual has any priority of personal identity over any other copy. Branching identity is a multiplication of the information. To argue that there is any priority of one copy over another is to require an additional condition for continuity than just the individual’s brain information.
+
+In the hypothetical event, in that you’re experiencing your life as a member of a group of copies of your mental information, to ask, “Who is married to your wife?” would require some additional definitive attributes than the information requirement for personal identity. It could be something like, the identity with complete spatial continuity is the individual who is married. It could also be that all copies are equally married to the spouse. Consider an additional factor, if both spouses are copied multiple times, which copies are married to each other. It seems that because the conditions for marriage have never had to deal with the aspect of cloning, this could be open for newly created marriage definition constraints for sometime in the future.
+
+This can also be said for things like inheritance laws. It could be something like, each clone that is created gets an even percentage of the property that belongs to the individual at the instant of identity branching. Of course, in this hypothetical case, the more copies that are made, the less property will be inherited per clone.
+
+This kind of projection thinking, of a future where multiple copies exist, can also be tied back into the anxieties and considerations that make personal identity survival such a controversial issue to attach additional continuity constraints to that are not just about the mental information.
+
+Consider this hypothetical situation story:
+You are given an opportunity to have your brain emulated. The procedure has gotten so advanced, that your brain can be scanned of all it’s information while you are still alive and there is no health risk. You are fully aware of the arguments against personal identity being anything more than just information preservation, so you don’t have any worries about whether or not the entity with an emulated brain is going to be you, and you're excited that this could be your big chance to fulfill your dreams of living forever! You undergo the procedure and the next day your fellow identity is standing next to you. You see your “twin” in a robotic body with a silicon based brain-like substrate while your perspective (for the remainder of this story) is from your original biological body. It is truly a marvel for you to behold that technology and science has come this far! For the next few weeks your robotic “twin” is having a space adventure, but without you because his/her body is able to survive the necessary harsh conditions that your biological body cannot. You’re starting to feel a little left out, but you keep on telling yourself to be happy because this doppelganger is still just “you.” The years pass and the robotic “twin” has added new upgrades to his/her artificial body that allow him/her to have all of the valued experiences of a normal human body, but with none of the weaknesses or vulnerabilities. You, however, in your original body, have become frail and weak with old age. At this point, you know that your biological body will soon quit and die. You’re starting to feel like this doppelganger of your mental information, scanned from your biological brain from years ago, doesn’t really seem like it’s you who’s getting to fulfill your dream of living forever. It’s more like you’ve been given the bad end of a deal that your robotic “twin” won out completely.
+
+If personal identity preservation is only based on the preservation of the information, then you, in the story, should be completely indifferent as to which entity gets what in life after the procedure, because it would hold up logically that “you” are also the robotic version. However, it can be difficult to mentally project yourself as experiencing the life of the robotic “twin” instead of the biological you, because the biological you had complete continuity from before and after the procedure, whereas the robotic “twin” only had the continuity of information.
+
+Unfortunately, there has yet to be a logical argument against the “copies” of you being all equally the preserved identity of you. However, this ever persistent need for some kind of additional condition for continuity (other than just information) between the identity from before the procedure and after the procedure, in order to have the original personal identity preserved and survive, should not necessarily be dismissed as merely irrelevant obsolete prejudices, just because there is no irrefutable justification as of yet.
+
+One possible path to take for a more clear understanding of personal identity preservation, as technology and neuroscience progresses, is a complete understanding of connectomics and how connectomics can explain the first-person experiences in a completely non-metaphysical way.

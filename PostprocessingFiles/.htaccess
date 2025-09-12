@@ -1,0 +1,22 @@
+#
+# 20200311
+# https://www.a2hosting.com/kb/developer-corner/apache-web-server/using-the-mod-speling-apache-module
+# AllowOverride All
+
+#<Directory />
+#   Options Indexes FollowSymLinks
+#   AllowOverride All
+#   Require all granted
+#</Directory>
+
+
+# https://stackoverflow.com/questions/17223855/how-would-i-make-apache-case-insensitive-using-htaccess
+# 20200310
+RewriteEngine on
+CheckSpelling on
+
+# https://www.a2hosting.com/kb/developer-corner/apache-web-server/using-the-mod-speling-apache-module
+<IfModule mod_speling.c>
+    CheckCaseOnly on
+    CheckSpelling on
+</IfModule>

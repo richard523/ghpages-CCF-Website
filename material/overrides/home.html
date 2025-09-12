@@ -1,0 +1,369 @@
+<!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+{% extends "main.html" %}
+
+<!-- Render hero under tabs -->
+{% block tabs %}
+  {{ super() }}
+
+  <!-- Additional styles for landing page -->
+  <style>
+    /* Application header should be static for the landing page */
+    .md-header {
+      position: initial;
+    }
+
+    /* Remove spacing, as we cannot hide it completely */
+    .md-main__inner {
+      margin: 0;
+    }
+
+    /* Hide main content for now */
+    .md-content {
+      display: none;
+    }
+
+    /* Hide table of contents */
+    @media screen and (min-width: 60em) {
+      .md-sidebar--secondary {
+        display: none;
+      }
+    }
+
+    /* Hide navigation */
+    @media screen and (min-width: 76.25em) {
+      .md-sidebar--primary {
+        display: none;
+      }
+    }
+
+    /* Fix style for the footer color */
+    .md-main {
+      background-color: hsla(230, 15%, 14%, 1);
+    }
+
+    .emphasized-link:hover {
+      background-color: #000070;
+    }
+
+    /* New styles */
+    .md-grid {
+      max-width: 80%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+    }
+    @media screen and (min-width: 76.25em) {
+      .md-grid {
+        max-width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .social-links {
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding: 1rem;
+      z-index: 100;
+    }
+
+    .mdx-hero__image iframe {
+      width: 100%;
+      aspect-ratio: 16/9;
+      border: 2px solid #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .content-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .activities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .activity {
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 4px;
+    }
+
+    .news-section {
+      margin: 2rem 0;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 4px;
+    }
+
+    @media screen and (max-width: 60em) { /*mobile title small fix*/
+      .md-header__topic {
+        display: none;
+      }
+    }
+  </style>
+
+  <!-- Hero for landing page -->
+  <section class="mdx-container">
+    <div data-md-component="announce" style="justify-content: center !important; margin-left: 0rem !important; font-size: 12;">
+        <div class="md-banner__inner md-grid md-typeset">
+          <div style="display: left; justify-content: flex-start; align-items: left; color: white; background-color: #E53935; padding: .5rem .5rem;">
+            <a href="/About/Fraud-Alert/" style="color: white; text-decoration: underline; white-space: nowrap;"><strong>A quick and important note on security.&nbsp;</strong></a>
+            <button
+            class="md-banner__button md-icon"
+            aria-label="Dismiss announcement"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          </button>
+          </div>
+        </div>
+    </div>
+    <div class="md-grid md-typeset">
+      <div class="mdx-hero">
+        <!-- Hero content -->
+        <div class="mdx-hero__content">
+          <h1>Advancing Research and Development for Whole Brain Emulation</h1>
+          <p>The Carboncopies Foundation leads research and development toward whole brain emulation - a technology to preserve and restore brain function.</p>
+          
+          <div class="action-buttons">
+            <a href="{{ '/Join' | url }}" class="md-button md-button--primary">
+              Join Us
+            </a>
+            <a href="{{ '/Donate' | url }}" class="md-button">
+              Donate
+            </a>
+          </div>
+          <div class="news-section">
+            <h2>Latest News & Events</h2>
+            <!-- <div class="news-item">
+              <h3>Summer Internships Are Here!</h3>
+              <p>
+                The Carboncopies Foundation has a number of openings for Internships for the Summer of 2025.
+                Interested? Check out the openings on our <a href="{{ '/Internships' | url }}" target="_blank" style="color: #9bb8d2;">Internships page →</a>
+              </p>
+            </div> -->
+            <div class="news-item">
+              <h3>Memory Decoding Journal Club</h3>
+              <p>
+                <a href="{{ '/Events/JournalClubs/MemoryDecoding/2025-08-12' | url }}" style="color: #9bb8d2;">Join us</a> for a discussion on <i>"The dendritic engram"</i> presented by Dr. Randal Koene on August 12, 2025. In collaboration with Aspirational Neuroscience.
+                <br>
+                Missed the last session? Watch <a href="https://youtu.be/DinPC_MR4fc?si=-o4wzDxycpmLM46W" target="_blank" style="color: #9bb8d2;">here</a>.
+              </p>
+              <a href="https://aspirationalneuroscience.org/register-with-us/" class="emphasized-link" style="color: #c5d9ed;">Register for updates Here →</a>
+            </div>
+            <div class="news-item">
+              <h3>Brain Emulation Challenge</h3>
+              <p>
+                Our latest online workshop entitled <b>Brain Emulation Challenge</b>: Functionalizing Brain Data, Ground-Truthing, and the Role of Artificial Data in Advancing Neuroscience released February 22, 2025.
+              </p>
+              <a href="{{ 'https://www.youtube.com/watch?v=5e9Ynccipzs&list=PLxA55oVVnSGRhD_lplYkF4bG_Lxd2p2C0' | url }}" class="emphasized-link" style="color: #c5d9ed;">Watch now →</a>
+            </div>
+            <div class="news-item">
+              <h3>Due Diligence Services Offered</h3>
+              <p>
+                We now offer in-depth due diligence services for investors, grantors, press on startups, research claims and proposals involving the intricacies of brain interfaces,
+                brain emulation and related topics.
+              </p>
+              <a href="{{ '/About/DueDiligence' | url }}" class="emphasized-link" style="color: #c5d9ed;">See here →</a>
+            </div>
+            <div class="news-item">
+              <h3>New Research: Neuroscience of Memory Survey</h3>
+              <p>
+                Explore the latest preprint on the neuroscience of memory, providing comprehensive insights into memory formation and retention mechanisms.
+              </p>
+              <a href="{{ '/assets/pdfs/neuroscience_of_memory_survey_preprint.pdf' | url }}" class="emphasized-link" style="color: #c5d9ed;">Read the Paper →</a>
+            </div>
+          </div>
+          
+          
+
+          <div class="content-cards">
+            <div class="card">
+              <h3>Research Projects</h3>
+              <ul>
+                <li>WBE Roadmap Development</li>
+                <li>Brain Emulation Challenge</li>
+                <li>Ethics Framework</li>
+              </ul>
+              <a href="{{ '/Research' | url }}" class="emphasized-link" style="color: #c5d9ed;">View Research →</a>
+            </div>
+            
+            <div class="card">
+              <h3>Education</h3>
+              <ul>
+                <li>Technical Workshops</li>
+                <li>Public Lectures</li>
+                <li>Learning Resources</li>
+              </ul>
+              <a href="{{ '/Resources/Learn' | url }}" class="emphasized-link" style="color: #c5d9ed;">Learn More →</a>
+            </div>
+            
+            <div class="card">
+              <h3>Community</h3>
+              <ul>
+                <li>Discussion Groups</li>
+                <li>Volunteer Opportunities</li>
+                <li>Collaboration Network</li>
+              </ul>
+              <a href="{{ '/Join' | url }}" class="emphasized-link" style="color: #c5d9ed;">Get Involved →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero image -->
+        <div class="mdx-hero__image">
+          <!-- <iframe 
+            width="768" 
+            height="512" 
+            src="https://videos.carboncopies.org/embed?m=QugYndNjR" 
+            frameborder="0" 
+            allowfullscreen>
+          </iframe> -->
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/9E9YkgP1bGs?si=E-PGs4OUZWZzpJrb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <!-- <a href="{{ '/Events/JournalClubs/MemoryDecoding/2025-07-15' | url }}" target="_blank" style="display: inline-block; padding: 15px 30px; background-color: #2e279d; color: white; text-decoration: none; font-weight: bold; border-radius: 4px; font-size: 18px; transition: all 0.3s ease; box-shadow: 0 0 0 rgba(46, 39, 157, 0);" onmouseover="this.style.backgroundColor='#3a33c2'; this.style.boxShadow='0 0 20px rgba(46, 39, 157, 0.7)';" onmouseout="this.style.backgroundColor='#2e279d'; this.style.boxShadow='0 0 0 rgba(46, 39, 157, 0)';">
+            <img src="/Events/Assets/MDJC11-July15.png" alt="2025-07-15 MD JC" />  
+          </a>-->
+          <div class="foundation-activities">
+            <h2>Our Impact</h2>
+            <div class="activities-grid">
+              <div class="activity">
+                <h3>Research Collaboration</h3>
+                <p>Building networks of scientists and engineers working on WBE technologies</p>
+              </div>
+              
+              <div class="activity">
+                <h3>Scientific Review</h3>
+                <p>Publishing reviews of literature and technology developments</p>
+              </div>
+              
+              <div class="activity">
+                <h3>Technology Roadmap</h3>
+                <p>Maintaining R&D roadmaps to address key challenges</p>
+              </div>
+              
+              <div class="activity">
+                <h3>Public Engagement</h3>
+                <p>Increasing awareness through conferences, workshops, and educational materials</p>
+              </div>
+
+              <div class="activity">
+                <h3>Due Diligence</h3>
+                <p>Are you considering investing in / funding a whole brain emulation, BCI or neurotech related
+                  project or startup? Press working on an article or project? In need of due diligence expertise, <a href="{{ '/About/DueDiligence' | url }}" class="emphasized-link" style="color: #c5d9ed;">read here →</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="additional-links">
+            <p>
+              <a href="https://braingenix.org" title="BrainGenix" class="emphasized-link" style="color: #c5d9ed;">
+                Visit BrainGenix.org for ongoing WBE research and development →
+              </a>
+            </p>
+            
+            <p>
+              <a href="https://sites.google.com/carboncopies.org/ethics" title="WBE Ethics" class="emphasized-link" style="color: #c5d9ed;">
+                Join our Panel Events on Ethics in Whole-Brain Emulation →
+              </a>
+            </p>
+
+            <p>
+              <a href="https://carboncopies-store.myspreadshop.com/" title="CCF Store" class="emphasized-link" style="color: #c5d9ed;">
+                Visit the Carboncopies Store →
+              </a>
+            </p>
+          </div>
+
+          <div class="internal-link" style="margin-top: 3rem; font-size: 0.9em;">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Social Media Links -->
+    <!-- <div class="social-links" id="socialLinks">
+      <button class="close-button" onclick="toggleSocialLinks()" aria-label="Toggle social links">×</button>
+      <div class="social-icons"> -->
+        <!-- Add your social media links here -->
+        <!-- <a href="https://youtube.com/@CarboncopiesOrg" target="_blank" rel="noopener">YouTube</a> -->
+        <!-- <a href="https://twitter.com/CarbonCopies" target="_blank" rel="noopener">Twitter</a> -->
+        <!-- Add other social media links -->
+      <!-- </div> -->
+    <!-- </div> -->
+
+    <!-- Chatbot integration -->
+    <!-- <script type="module">
+      import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+      Chatbot.init({
+          chatflowid: "c6080984-ab3a-489e-8a5d-9ad18e5310f6",
+          apiHost: "https://carboncopies.onrender.com",
+      })
+    </script> -->
+
+    <!-- Social Links Toggle Script -->
+    <script>
+      function toggleSocialLinks() {
+        const socialLinks = document.getElementById('socialLinks');
+        if (socialLinks.classList.contains('hidden')) {
+          socialLinks.classList.remove('hidden');
+          localStorage.removeItem('socialLinksHidden');
+        } else {
+          socialLinks.classList.add('hidden');
+          localStorage.setItem('socialLinksHidden', 'true');
+        }
+      }
+
+      // Check localStorage on page load
+      document.addEventListener('DOMContentLoaded', () => {
+        const socialLinks = document.getElementById('socialLinks');
+        if (localStorage.getItem('socialLinksHidden')) {
+          socialLinks.classList.add('hidden');
+        }
+      });
+    </script>
+
+  </section>
+
+{% endblock %}
+
+<!-- Content -->
+{% block content %}{% endblock %}
+
+<!-- Application footer -->

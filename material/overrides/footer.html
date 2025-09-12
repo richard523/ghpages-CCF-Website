@@ -1,0 +1,33 @@
+{% extends "partials/footer.html" %}
+
+{% block footer %}
+<footer class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+        <div class="md-copyright__highlight">
+          Copyright &copy; 2024 Carboncopies Foundation. Carboncopies Foundation is a registered 501(c)(3) nonprofit organization focused on advancing public education and scientific research. EIN: 81-4083638
+        </div>
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Made with Material for MkDocs
+        </a>
+        <br>
+        <a href="/About/DueDiligence">Associated Domains</a>
+        <!-- <a href="/About/OfficialDocuments">Official Documents</a> TODO-->
+        <br>
+        <a href="/About/Mission/">About</a>
+        <a href="/Contact">Contact</a>
+        <a href="/About/Mission">Mission</a>
+        <a href="/Donate">Donate</a>
+        <!-- <a href="/Privacy">Privacy Policy</a> TODO-->
+        <a href="https://braingenix.org" title="BrainGenix" target="_blank" rel="noopener">BrainGenix</a>
+        <a href="https://sites.google.com/carboncopies.org/ethics" title="WBE Ethics" target="_blank" rel="noopener">Ethics Panel</a>
+        <a href="https://carboncopies-store.myspreadshop.com/" title="CCF Store" target="_blank" rel="noopener">Store</a>
+      </div>
+      <div class="md-social">
+        {% include "partials/social.html" %}
+      </div>
+    </div>
+  </div>
+</footer>
+{% endblock %}

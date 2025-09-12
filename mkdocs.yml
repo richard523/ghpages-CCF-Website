@@ -1,0 +1,433 @@
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to
+# deal in the Software without restriction, including without limitation the
+# rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+# sell copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+# IN THE SOFTWARE.
+
+# Project information
+site_name: Carboncopies Foundation
+site_url: https://carboncopies.org/
+# site_author: Martin Donath
+# site_description: >-
+  # Write your documentation in Markdown and create a professional static site in
+  # minutes – searchable, customizable, in 60+ languages, for all devices
+
+watch:
+  - ./material
+
+# Repository
+repo_name: carboncopies
+repo_url: https://gitlab.braingenix.org/carboncopies/
+#color_mode_toggle: true
+#color_mode: light
+
+# Copyright
+# copyright: Copyright &copy; 2016 - 2024 Martin Donath
+
+copyright: >
+  <a href="#__consent">Change cookie settings</a>
+
+# Configuration
+theme:
+  name: material
+  custom_dir: material/overrides
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    # - content.code.select
+    # - content.footnote.tooltips
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    # - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: indigo
+      toggle:
+        #icon: material/toggle-switch
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        #icon: material/toggle-switch-off
+        icon: material/weather-sunny
+        name: Switch to system preference
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/Favicon.png
+  # icon:
+  #   logo: logo
+  logo: assets/images/HeaderImage.png
+
+# Plugins
+plugins:
+  - redirects:
+      redirect_maps:
+        # The mappings below redirect the year/month categories to their corresponding workshop pages.
+        # See the nav tree structure.
+        'Events/Workshops/Year-Month/2020-Dec.md' : 'Events/Workshops/Topic/UpdatingRoadmap/Part6/index.md'
+        'Events/Workshops/Year-Month/2020-March.md' : 'Events/Workshops/Topic/UpdatingRoadmap/Part4/index.md'
+        'Events/Workshops/Year-Month/2019-Dec.md' : 'Events/Workshops/Topic/UpdatingRoadmap/Part3/index.md'
+        'Events/Workshops/Year-Month/2019-Sept.md' : 'Events/Workshops/Topic/UpdatingRoadmap/Part2/index.md'
+        'Events/Workshops/Year-Month/2019-June.md' : 'Events/Workshops/Topic/UpdatingRoadmap/OxfordRoadmapReview/index.md'
+        'Events/Workshops/Year-Month/2019-March.md' : 'Events/Workshops/Topic/AISafety/index.md'
+        'Events/Workshops/Year-Month/2018-Sept.md' : 'Events/Workshops/Topic/MetaphysicsEthics/index.md'
+        'Events/Workshops/Year-Month/2018-April.md' : 'Events/Workshops/Topic/BrainPreservationToReconstruction/index.md'
+        'Events/Workshops/Year-Month/2018-Jan.md' : 'Events/Workshops/Topic/ReverseEngineering/index.md'
+
+#   - blog
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+#   - minify:
+#       minify_html: true
+
+# Hooks
+hooks:
+  - material/overrides/hooks/shortcodes.py
+  - material/overrides/hooks/translations.py
+
+# Additional configuration
+extra:
+  status:
+    new: Recently added
+    deprecated: Deprecated
+  analytics:
+    provider: google
+    property: G-GVN4RLJQMK
+    # feedback:
+    #   title: Was this page helpful?
+    #   ratings:
+    #     - icon: material/emoticon-happy-outline
+    #       name: This page was helpful
+    #       data: 1
+    #       note: >-
+    #         Thanks for your feedback!
+    #     - icon: material/emoticon-sad-outline
+    #       name: This page could be improved
+    #       data: 0
+    #       note: >- 
+    #         Thanks for your feedback! Help us improve this page by
+    #         using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our information and whether users
+      find what they're searching for. With your consent, you're helping us to
+      improve our site.
+
+  social:
+    - icon: fontawesome/brands/gitlab
+      link: https://gitlab.braingenix.org/carboncopies/
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/groups/carboncopies/
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/carboncopiesorg
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/8494124/
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/channel/UCuNZLgW-6Xcp6wfyb2Y_Thw
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/quqzV4P4Z4
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:contact@carboncopies.org
+
+
+extra_css:
+  - stylesheets/extra.css
+
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      normalize_issue_symbols: true
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      auto_append:
+        - includes/mkdocs.md
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+# Page tree
+nav:
+  - Home: index.md
+
+  - Donate: 
+    - Donate: Donate/index.md
+
+  # - Sponsor:
+  #   - Sponsor: Sponsor/index.md
+
+  - Join:
+    - Join: Join/index.md
+
+  - Internships:
+    - Internships: Internships/index.md
+
+  - About:
+    - Mission: About/Mission.md
+    - Impact: About/impact.md
+    - FAQ: About/FAQ.md
+    - Team:
+      - Meet Our Team: About/Team/Us.md
+      - Bios:
+        - Randal Koene:
+          - Bio: About/Team/Bios/RandalKoene.md
+          - Talks: About/Team/Bios/RandalKoene/Talks.md
+          - Interviews: About/Team/Bios/RandalKoene/Interviews.md
+        - Stefania Schino: About/Team/Bios/StefaniaSchino.md
+        - Angela Thornton: About/Team/Bios/AngelaThornton.md
+    - Press Inquiries: About/PressInquiries.md
+    - Due Diligence: About/DueDiligence.md
+    - Fraud Alert: About/Fraud-Alert.md
+    - Social Media:
+      - YouTube: https://www.youtube.com/@carboncopiesfoundation4122
+      - Instagram: https://www.instagram.com/carboncopies_foundation
+      - Twitter: https://x.com/carboncopiesorg
+      - Facebook Group: https://www.facebook.com/groups/carboncopies/
+      - LinkedIn: https://www.linkedin.com/company/carbon-copies/
+      - Discord: https://discord.gg/quqzV4P4Z4
+
+
+  - Research:
+    - Research: Research/index.md
+    - Links:
+      - WBE Challenge: https://braingenix.org/Challenge/Overview/
+      - Ethics Framework: https://sites.google.com/carboncopies.org/ethics
+      - WBE Roadmap: https://wholebrainemulation.org
+      - BrainGenix: https://braingenix.org
+      - Code (GitLab): https://gitlab.braingenix.org/Carboncopies/
+
+  - Education:
+    - Education: Resources/index.md
+    - Learn: Resources/Learn.md
+    - Media: Resources/Media.md
+    - CarbonGPT (Experimental): /CarbonGPT # https://carboncopies.org/carbongpt
+    - Lectures:
+      - Recommended: Resources/Lectures.md
+      - See More:
+        - Advances towards Substrate-Independent Minds: Resources/Lectures/koene.transhuman-visions-2014.pdf
+        - A new strategy for human evolution: https://sites.google.com/site/carboncopiesproject/gf2045-towards-a-new-strategy-for-human-evolution-congress-proceedings-transcripts
+        - HumanityPlus Hong Kong: https://www.youtube.com/playlist?list=PLDD4774C498DE1EC3
+        - Substrate-Independent Minds: http://2012.singularitysummit.com.au/2012/11/randal-koene-substrate-independent-minds/
+        - AIG and Neuroscience: https://www.youtube.com/watch?v=tNfP4vqE0No
+        - Towards Tractable AGI: https://youtu.be/whxcRC-gt-M?si=cnuAegVjTMetm4Bd
+        - Upload: https://www.popsci.com/article/science/neuroscientist-who-wants-upload-humanity-computer/
+    - Writing:
+      - Books: Resources/Books.md
+      - Posts:
+        - Nondestructive Mind Uploading and the Stream of Consciousness: Resources/Writing/2023_NondestructuveMU/Post.md
+        - The Stream of Consciousness and Personal Identity: Resources/Writing/2019_StreamOfConsciousness/Post.md
+        - Transcending Biology - Reverse Engineering the Brain: Resources/Writing/2018_TranscendingBiology/Post.md
+        - Response to J. Bonilla’s ‘Your mind will never be uploaded to a computer’: Resources/Writing/2018_Response/Post.md
+
+    - Podcast:
+        - Carboncopies Podcast: Resources/Podcast/Index.md
+        - Episodes:
+          - 11 - Why WBE From Your Preserved Brain is Probably You: Resources/Podcast/Episodes/11_WhyWBEFromYourBrainIsProbablyYou/Post.md
+          - 10 - Introduction from Brain Preservation to Reconstruction: Resources/Podcast/Episodes/10_FromBrainPreservation/Post.md
+
+
+  - Events:
+    - Our Events: Events/index.md  
+    - Upcoming Events:
+      - Journal Clubs:
+        - Journal Clubs: Events/JournalClubs/index.md
+        - Consciousness and Subjective Experience JC: Events/JournalClubs/ConsciousnessAndSubjectiveExperience/index.md
+        - 2025-09-23 Distinct synaptic plasticity rules across dendritic compartments: Events/JournalClubs/MemoryDecoding/2025-09-23.md
+    - Past Events:
+      - Workshops:
+        - By topic:
+          - Brain Emulation Challenge:
+            - Brain Emulation Challenge: Events/Workshops/UpcomingEvents/FebruaryWorkshop2025LandingPage/Page.md
+          - Brain Preservation to Reconstruction:
+            - Brain Preservation to Reconstruction: Events/Workshops/Topic/BrainPreservationToReconstruction/index.md
+            - Brain Preservation to Reconstruction Summary: Events/Workshops/Topic/BrainPreservationToReconstruction/Summary.md  
+          - Reverse Engineering the Brain:
+            - Reverse Engineering the Brain: Events/Workshops/Topic/ReverseEngineering/index.md
+            - Reverse Engineering the Brain Summary: Events/Workshops/Topic/ReverseEngineering/Summary.md
+          - Roadmap:
+            - Roadmap part 6:
+              - Roadmap part 6: Events/Workshops/Topic/UpdatingRoadmap/Part6/index.md
+            - Roadmap part 4:
+              - Roadmap part 4: Events/Workshops/Topic/UpdatingRoadmap/Part4/index.md
+            - Roadmap part 3:
+              - Roadmap part 3: Events/Workshops/Topic/UpdatingRoadmap/Part3/index.md
+            - Roadmap part 2:
+              - Roadmap part 2: Events/Workshops/Topic/UpdatingRoadmap/Part2/index.md
+            - Roadmap part 1:
+              - Roadmap part 1: Events/Workshops/Topic/UpdatingRoadmap/OxfordRoadmapReview/index.md
+          - AI Safety:
+            - AI Safety: Events/Workshops/Topic/AISafety/index.md
+            - AI Safety Summary: Events/Workshops/Topic/AISafety/Summary.md
+            - AI Safety Transcript: Events/Workshops/Topic/AISafety/Transcript.md
+          - Metaphysics and Ethics:
+            - Metaphysics and Ethics: Events/Workshops/Topic/MetaphysicsEthics/index.md
+            - Neuroethics of WBE: https://sites.google.com/carboncopies.org/ethics#h.htnziztmu2w4
+        - By year/month:
+          - 2025:
+            - Feb: Events/Workshops/UpcomingEvents/FebruaryWorkshop2025LandingPage/Page.md
+          - 2024:
+            - June: https://sites.google.com/carboncopies.org/ethics#h.htnziztmu2w4
+          - 2020:
+            - Dec: Events/Workshops/Year-Month/2020-Dec.md
+            - March: Events/Workshops/Year-Month/2020-March.md
+          - 2019:
+            - Dec: Events/Workshops/Year-Month/2019-Dec.md
+            - Sept: Events/Workshops/Year-Month/2019-Sept.md
+            - June: Events/Workshops/Year-Month/2019-June.md
+            - March: Events/Workshops/Year-Month/2019-March.md
+          - 2018:
+            - Sept: Events/Workshops/Year-Month/2018-Sept.md          
+            - April: Events/Workshops/Year-Month/2018-April.md
+            - Jan: Events/Workshops/Year-Month/2018-Jan.md
+    - Journal Clubs:
+      - Journal Clubs: Events/JournalClubs/index.md
+      - Memory Decoding JC:
+        - Memory Decoding JC: Events/JournalClubs/MemoryDecoding/index.md
+        - 2024-09-29 Drosophila visual system model: Events/JournalClubs/MemoryDecoding/2024-09-29.md
+        - 2024-12-29 Drosophila sensorimotor model: Events/JournalClubs/MemoryDecoding/2024-12-29.md
+        - 2025-03-11 Engrams & memory consolidation: Events/JournalClubs/MemoryDecoding/2025-03-11.md
+        - 2025-04-08 Hippocampal engram updating: Events/JournalClubs/MemoryDecoding/2025-04-08.md
+        - 2025-04-22 Learning engrams in amygdala: Events/JournalClubs/MemoryDecoding/2025-04-22.md
+        - 2025-05-06 Motor learning engrams: Events/JournalClubs/MemoryDecoding/2025-05-06.md
+        - 2025-05-20 Engram architecture hippocampus: Events/JournalClubs/MemoryDecoding/2025-05-20.md
+        - 2025-06-03 Structure and function in CA3: Events/JournalClubs/MemoryDecoding/2025-06-03.md
+        - 2025-06-17 Neocortical engrams for contextual memories: Events/JournalClubs/MemoryDecoding/2025-06-17.md
+        - 2025-07-01 Systems consolidation reorganizes hippocampal engram circuitry: Events/JournalClubs/MemoryDecoding/2025-07-01.md
+        - 2025-07-15 Binary and analog variation of synapses between cortical pyramidal neurons: Events/JournalClubs/MemoryDecoding/2025-07-15.md
+        - 2025-07-29 Nominations for the 2025 Memory Decoding Prize - Discussion: Events/JournalClubs/MemoryDecoding/2025-07-29.md
+        - 2025-08-12 The dendritic engram: Events/JournalClubs/MemoryDecoding/2025-08-12.md
+        - 2025-08-26 Behavioral time scale synaptic plasticity underlies CA1 place fields: Events/JournalClubs/MemoryDecoding/2025-08-26.md
+        - 2025-09-09 Memory engram synapse 3D molecular architecture by cryoET: Events/JournalClubs/MemoryDecoding/2025-09-09.md
+        - 2025-09-23 Distinct synaptic plasticity rules across dendritic compartments: Events/JournalClubs/MemoryDecoding/2025-09-23.md
+      - Consciousness and Subjective Experience JC: Events/JournalClubs/ConsciousnessAndSubjectiveExperience/index.md
+    - Livestream: Events/Livestream.md
+        
+
+    # - Resources:
+    #   - Calendar: Events/Calendar.md
+    #   - Journal Club: Events/JournalClub.md
+
+
+  - Blog: 
+    - Recent: Blog/Recent.md
+    - Categories:
+      - Technical:
+        - Experimental Enhancement of Neurophysiological Function: Blog/Posts/Enhancement/Post.md
+        - Restoration of Function After Brain Damage Using a Neural Prosthesis: Blog/Posts/Restoration/Post.md
+        - Single Neuron Dynamics and Computation: Blog/Posts/Computation/Post.md
+        - Quantum Mechanics and Higher Brain Functions: Blog/Posts/BrainFunction/Post.md
+        - An Introduction to Neuroprosthesis and BCIs: Blog/Posts/Neuroprosthesis/Post.md
+        - Neuromorphic Hardware Designs - A Quick Survey: Blog/Posts/NeuromorphicHardwareDesigns/Post.md
+        - What is Whole Brain Emulation?: Blog/Posts/WhatIsWholeBrainEmulation/Post.md
+
+
+      - Uncategorized:
+        - If Simulated Fire Can't Burn Wood, How Can a Simulation Really Think, Feel or be Conscious?: Blog/Posts/IfSimulatedFireCant/Post.md
+        - Would an Upload Be Me, or Just a Copy; Who is the Real Me?: Blog/Posts/UploadBeMe/Post.md
+        - Brain Health And Brain Emulation: Blog/Posts/BrainHealth/Post.md
+        - Does the Chinese Room Thought Experiment disprove true AI and mind uploading?: Blog/Posts/ChineseRoom/Post.md
+
+
+      - Easy Reading:
+        - How Could Whole Brain Emulation Affect Us?: Blog/Posts/WBEHowCouldItAffectUs/Post.md
+        - Why Whole Brain Emulation isn't a threat to humanity: Blog/Posts/ShouldYouBeScared/Post.md
+        - A reason to hedge on whole-brain emulation: Blog/Posts/HedgeOnWholeBrainEmulation/Post.md
+        - What will the first Substrate Independent Mind Look Like?: Blog/Posts/WhatWillFirstSIMLookLike/Post.md
+        - An Ecosystem for Emulated Minds: Blog/Posts/EcosystemForEM/Post.md
+        - Why We Should Send Uploaded Astronauts On Interstellar Missions: Blog/Posts/Astronauts/Post.md
+        - The Greatest Long-Term Threats Facing Humanity: Blog/Posts/Threats/Post.md
+        - How Pieces of Live Human Brain are Helping Scientists Map Nerve Cells: Blog/Posts/BrainBits/Post.md
+        - Where We Go From Here: Blog/Posts/FromHere/Post.md
+        - Is the Brain a Quantum Computer?: Blog/Posts/BrainQuantum/Post.md
+        - BrainFacts.org: Blog/Posts/BrainFacts/Post.md
+        - The Neural Archives Foundation: Blog/Posts/NeuralArchives/Post.md
+        - The Preconscious Smart Home: Blog/Posts/Preconscious/Post.md
+
+  - Newsletter: 
+    - July - August 2024: Newsletter/JulyAugust2024.md
+    - May - July 2024: Newsletter/MayJuly2024.md
+    # - Test: Newsletter/OldNewsletter/test.md
+
+  # - Livestream: Livestream.md
+
+  - Contact:
+    - Contact: Contact/index.md
