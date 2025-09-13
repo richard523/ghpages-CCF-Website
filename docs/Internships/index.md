@@ -44,7 +44,7 @@ There are plenty of ways that anyone can pitch in, so if you want to be involved
 
 ## Thank you to our past interns:
 
-<div class="grid cards custom-responsive-grid" markdown>
+<div class="grid cards" markdown>
 
 - ### Syed Islam <br/> <h5> I've made the **BrainGenix Python client** easier to use by combining an older part of the code into the main program. This means all the scripts still work, and it's simpler for developers. I also built a new feature that lets researchers get a detailed map of the brain's connections, showing exactly where each neuron and its connections are located.<br/><br/>I am a recent CS graduate from UCR and am continuing my education at UT Austin in AI. I plan to do more Research into Machine Learning focusing on Deep Networks.</h5> ![](https://i.imgur.com/oJWXFZ1.jpeg)
 

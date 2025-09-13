@@ -7,7 +7,7 @@ hide:
 # Join
 
 ## Open roles
-<div class="grid cards custom-responsive-grid" markdown>
+<div class="grid cards" markdown>
 
 - <h3>__PR & Donor Relations Volunteer__: <br/>We're seeking a motivated PR volunteer to help establish and maintain relationships with corporate donors, focusing on securing IT resource donations and managing donor communications. <br/><br/><a href="/Join/pr-role">:octicons-arrow-right-24: View the full description here to apply</a></h3>
 - <h3>__Google Ads Volunteer__: <br/>We are seeking a skilled volunteer to manage our Google Ads campaigns to increase awareness of our foundation, grow our community, and promote our events. This is an excellent opportunity for someone passionate about cutting-edge neuroscience and technology who wants to contribute their digital marketing skills to help advance our mission. <br/><br/><a href="/Join/google-ads-role">:octicons-arrow-right-24: View the full description here to apply</a></h3>
@@ -36,7 +36,7 @@ There are plenty of ways that anyone can pitch in, so if you want to be involved
 
 ## Success Stories:
 
-<div class="grid cards custom-responsive-grid" markdown>
+<div class="grid cards" markdown>
 
 - ### Thomas Liao <br/> <h5> I'm particularly interested in computational neuroscience and distributed systems, so I started the BrainGenix project at the Carboncopies Foundation. At BrainGenix, we're trying to develop a platform that will eventually lead to Whole Brain Emulation. I love technology - from code and servers to trains and urban planning. If any of that sounds interesting to you, head on over to check out some of my [projects](https://tliao.net)!</h5> ![](https://tliao.net/assets/Portrait.jpg-c.jpg) ![](https://dl.dropboxusercontent.com/scl/fi/e4lsm8qz5v13gooxy7xth/msedge_o7YOiuCGTc.jpg?rlkey=ni133vwtt8wbdt5if4zcctbua&dl=0)
 
