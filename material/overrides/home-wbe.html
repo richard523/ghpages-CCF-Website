@@ -1,0 +1,157 @@
+<!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+{% extends "main.html" %}
+
+<!-- Render hero under tabs -->
+{% block tabs %}
+  {{ super() }}
+
+  <!-- Additional styles for landing page -->
+  <style>
+
+
+    [data-md-color-scheme="default"] {
+      --md-default-bg-color: hsla(230, 15%, 14%, 1);
+    }
+
+
+    /* Application header should be static for the landing page */
+    .md-header {
+      position: initial;
+    }
+
+    /* Remove spacing, as we cannot hide it completely */
+    .md-main__inner {
+      margin: 0;
+    }
+
+    /* Hide main content for now */
+    .md-content {
+      display: none;
+    }
+
+    /* Hide table of contents */
+    @media screen and (min-width: 60em) {
+      .md-sidebar--secondary {
+        display: none;
+      }
+    }
+
+    /* Hide navigation */
+    @media screen and (min-width: 76.25em) {
+      .md-sidebar--primary {
+        display: none;
+      }
+    }
+
+
+
+    .emphasized-link:hover {
+      background-color: #000070;
+    } /* CSS link color */
+  </style>
+
+  <!-- Hero for landing page -->
+  <section class="mdx-container">
+    <div class="md-grid md-typeset">
+      <div class="mdx-hero">
+
+
+
+        <!-- Hero content -->
+        <div class="mdx-hero__content">
+          <h1>Welcome</h1>
+          <p>
+            The Whole Brain Emulation (WBE) Roadmap update group is working on an update of a forward-looking roadmap towards whole brain emulation.
+            The first WBE roadmap manuscript was published in 2008 by the Future of Humanity Institute, Oxford University, edited by Dr. Anders Sandberg and Prof. Nick Bostrom.
+            It was a compilation of articles contributed in a follow-up report to the First Whole Brain Emulation Workshop at Oxford University, by workshop participants John Fiala, Robin Hanson, Kenneth Jeffrey Hayworth, Todd Huffman, Eugene Leitl, Bruce McCormick, Ralph Merkle, Toby Ord, Peter Passaro, Nick Shackel, Randal A. Koene, Robert A. Freitas Jr and Rebecca Roache.
+            You can download the 2008 manuscript here: <a href="https://www.fhi.ox.ac.uk/brain-emulation-roadmap-report.pdf" target="_blank">https://www.fhi.ox.ac.uk/brain-emulation-roadmap-report.pdf</a>
+          </p>
+
+          <p>
+            Many technical developments and advances in understanding have come along in the years since the 2008 publication. The WBE Roadmap update group aims to publish a significantly revised, updated, and for some topics, extended roadmap. This update requires input from leading experts in numerous fields, insights gathered through a series of workshops, and the selective publication of individual sections in peer reviewed academic journals. During this process, the WBE Roadmap update group will make available on this site pre-print manuscripts of roadmap sections seeking public comment, as well as finalized and/or published sections.
+          </p>
+
+          <br>
+          
+          <a
+            href="{{ '/Articles/PhilosophyAndEthics' | url }}"
+            title="Pre-prints seeking comment"
+            class="md-button md-button--primary"
+          >
+            Pre-prints seeking comment
+          </a>
+          <a
+            href="{{ '/Articles/Fidelity' | url }}"
+            title="Published (sub)sections"
+            class="md-button"
+          >
+            Published (sub)sections
+          </a>
+          
+        </div>
+
+
+        <!-- Hero image -->
+        <div class="mdx-hero__image">
+          <img
+            src="assets/images/WBE_preserved_brain_20180407_2500_1406.jpg"
+            alt=""
+            width="768"
+            draggable="false"
+          >
+          <h2><b>What is whole brain emulation?</b></h2>
+
+            <p>
+              Whole Brain Emulation (WBE), is the putative process of creating a high-fidelity digital replica of a biological brain by scanning and simulating its structure at a sufficiently detailed level. The goal is to replicate the brain's functions — including consciousness, memories, and personality — in a computational substrate, effectively recreating a mind in a non-biological form.
+<p>
+Key Aspects of Whole Brain Emulation:
+<ul>
+<li>Acquiring brain data:
+Advanced neuroimaging techniques (e.g., high-throughput electron microscopy) need to map the brain's neurons, synapses, and other structures.
+The goal is to capture the connectome (the brain's wiring diagram) and possibly molecular-level details.</li>
+<li>Emulating the dynamic brain:
+The scanned data must be used to construct a computational model that replicates the relevant operations achieved by the brain's biological processes.</li>
+<li>Substrate independence:
+If consciousness arises from a brain's computational structure, not its biological medium, then it can theoretically run on artificial hardware (e.g., supercomputers, neuromorphic chips).
+</ul>
+</p>
+            </p>  
+            <br><br>
+          <p>
+          <iframe src="https://forms.gle/6UxZTS1s9FM9NRfEA" width="100%" height="1200" frameborder="0" marginheight="0" marginwidth="0" style="overflow: hidden;">Loading…</iframe>
+          </p>
+
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+  {% endblock %}
+
+<!-- Content -->
+{% block content %}{% endblock %}
+
+<!-- Application footer -->
+{% block footer %}{% endblock %}
