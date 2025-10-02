@@ -23,10 +23,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Build site
-        run: mkdocs build
-
-      - name: Copy post-processing files
-        run: cp -r PostprocessingFiles/* site/
+        run: ./Build.sh
 
       - name: Deploy to GitHub Pages
         run: mkdocs gh-deploy
