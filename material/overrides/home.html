@@ -23,9 +23,7 @@
 {% extends "main.html" %}
 
 <!-- Render hero under tabs -->
-{% block tabs %} {{ super() }} {% endblock %}
-
-{% block content %}
+{% block tabs %} {{ super() }}
 
 <!-- Additional styles for landing page -->
 <style>
@@ -41,6 +39,7 @@
 
   /* Hide main content for now */
   .md-content {
+    display: none;
   }
 
   /* Hide table of contents */
