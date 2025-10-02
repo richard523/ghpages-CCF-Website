@@ -22,15 +22,11 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Build
-        run: ./Build.sh
+      - name: Build site
+        run: mkdocs build
 
-      - name: List build artifacts
-        run: ls -R site
+      - name: Copy post-processing files
+        run: cp -r PostprocessingFiles/* site/
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
-          cname: ''
+      - name: Deploy to GitHub Pages
+        run: mkdocs gh-deploy
