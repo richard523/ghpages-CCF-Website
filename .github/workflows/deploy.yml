@@ -22,15 +22,8 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Build
+      - name: Build site
         run: ./Build.sh
 
-      - name: List build artifacts
-        run: ls -R site
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
-          cname: ''
+      - name: Deploy to GitHub Pages
+        run: mkdocs gh-deploy
