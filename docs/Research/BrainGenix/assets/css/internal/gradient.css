@@ -1,0 +1,79 @@
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+.gradient {
+  height: 340px;
+  width: 200px;
+  position: relative;
+  padding: 20px;
+  border-radius: 25px;
+  text-align: center;
+  margin: 30px;
+  background-color: #a776a7;
+  background-image: linear-gradient(to bottom left, #8244d0, #008037);
+  line-height: 15px;
+}
+
+.gradient-mobile {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.gradient-horizontal {
+  width: 60%;
+  position: relative;
+  padding: 60px;
+  border-radius: 20px;
+  text-align: center;
+  margin: 30px;
+  background-color: #a776a7;
+  background-image: linear-gradient(to bottom left, #8244d0, #008037);
+  line-height: 15px;
+}
+
+h2 {
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+p {
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 10px;
+}
+
+.button-gradient {
+  position: absolute;
+  white-space: nowrap;
+  bottom: 10%;
+  transform: translateX(-50%);
+  color: white;
+  background-color: #888;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 16px;
+  padding: 9px 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.mobile-button {
+  position: absolute;
+  white-space: nowrap;
+  bottom: 10%;
+  transform: translateX(-50%);
+  color: white;
+  background-color: #888;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 30px;
+  padding: 9px 20px;
+  cursor: pointer;
+  border: none;
+}
