@@ -69,16 +69,20 @@
   .md-grid {
     max-width: 80%;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
   }
   @media screen and (min-width: 76.25em) {
     .md-grid {
       max-width: 80%;
       margin: 0 auto;
-      display: flex;
-      justify-content: center;
     }
+  }
+
+  .social-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    z-index: 100;
   }
 
   .social-links {
@@ -136,6 +140,262 @@
       display: none;
     }
   }
+  .slideshow-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: -3rem auto 2rem !important;
+    position: relative;
+    overflow: hidden;
+  }
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  .slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    max-height: 80vh;
+  }
+  .slide-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  .slide-controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  .slide-dots {
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+  }
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .active,
+  .dot:hover {
+    background-color: #717171;
+  }
+
+/* Compliance Page Styles */
+.compliance-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+.compliance-hero {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.compliance-hero-text {
+    flex: 1;
+}
+
+.compliance-hero-image {
+    flex: 1;
+}
+
+.compliance-hero-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.compliance-section {
+    margin-bottom: 3rem;
+}
+
+.compliance-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--md-primary-fg-color);
+    padding-bottom: 0.5rem;
+}
+
+.impact-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.metric-card {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.metric-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.metric {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--md-primary-fg-color);
+}
+
+.donation-breakdown {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+}
+
+.donation-breakdown-item {
+    text-align: center;
+}
+
+.donation-breakdown-item h4 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--md-primary-fg-color);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--md-primary-fg-color);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #1e1a6e;
+}
+
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.testimonial-card {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.testimonial-author {
+    font-style: italic;
+    text-align: right;
+    margin-top: 1rem;
+}
+
+.legal-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.legal-links a {
+    text-decoration: none;
+    color: var(--md-primary-fg-color);
+}
+
+.legal-links a:hover {
+    text-decoration: underline;
+}
+
+/* Legal Page Styles */
+.legal-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+.legal-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.legal-container h2 {
+    font-size: 1.75rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.slideshow-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+[data-md-color-scheme="white"] .slideshow-title {
+  color: white;
+}
+
+/* Front page compliance section */
+[data-md-color-scheme="white"] .mdx-container .compliance-container {
+    color: white;
+}
+
+[data-md-color-scheme="white"] .mdx-container .compliance-section h2 {
+    color: white;
+    border-bottom-color: white;
+}
+
+[data-md-color-scheme="white"] .mdx-container .metric-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+[data-md-color-scheme="white"] .mdx-container .metric {
+    color: white;
+}
+
+[data-md-color-scheme="white"] .mdx-container .donation-breakdown-item h4 {
+    color: white;
+}
+
+[data-md-color-scheme="white"] .mdx-container .testimonial-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+[data-md-color-scheme="white"] .mdx-container .legal-links a {
+    color: white;
+}
+
+.mdx-hero {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+
+
 </style>
 
 <!-- Hero for landing page -->
@@ -275,53 +535,6 @@
             >
           </div>
         </div>
-
-        <div class="content-cards">
-          <div class="card">
-            <h3>Research Projects</h3>
-            <ul>
-              <li>WBE Roadmap Development</li>
-              <li>Brain Emulation Challenge</li>
-              <li>Ethics Framework</li>
-            </ul>
-            <a
-              href="{{ '/Research' | url }}"
-              class="emphasized-link"
-              style="color: #c5d9ed"
-              >View Research →</a
-            >
-          </div>
-
-          <div class="card">
-            <h3>Education</h3>
-            <ul>
-              <li>Technical Workshops</li>
-              <li>Public Lectures</li>
-              <li>Learning Resources</li>
-            </ul>
-            <a
-              href="{{ '/Resources/Learn' | url }}"
-              class="emphasized-link"
-              style="color: #c5d9ed"
-              >Learn More →</a
-            >
-          </div>
-
-          <div class="card">
-            <h3>Community</h3>
-            <ul>
-              <li>Discussion Groups</li>
-              <li>Volunteer Opportunities</li>
-              <li>Collaboration Network</li>
-            </ul>
-            <a
-              href="{{ '/Join' | url }}"
-              class="emphasized-link"
-              style="color: #c5d9ed"
-              >Get Involved →</a
-            >
-          </div>
-        </div>
       </div>
 
       <!-- Hero image -->
@@ -363,48 +576,51 @@
         <div class="foundation-activities">
           <h2>Our Impact</h2>
           <div class="activities-grid">
-            <div class="activity">
-              <h3>Research Collaboration</h3>
-              <p>
-                Building networks of scientists and engineers working on WBE
-                technologies
-              </p>
-            </div>
-
-            <div class="activity">
-              <h3>Scientific Review</h3>
-              <p>
-                Publishing reviews of literature and technology developments
-              </p>
-            </div>
-
-            <div class="activity">
-              <h3>Technology Roadmap</h3>
-              <p>Maintaining R&D roadmaps to address key challenges</p>
-            </div>
-
-            <div class="activity">
-              <h3>Public Engagement</h3>
-              <p>
-                Increasing awareness through conferences, workshops, and
-                educational materials
-              </p>
-            </div>
-
-            <div class="activity">
-              <h3>Due Diligence</h3>
-              <p>
-                Are you considering investing in / funding a whole brain
-                emulation, BCI or neurotech related project or startup? Press
-                working on an article or project? In need of due diligence
-                expertise,
+            <div class="content-cards">
+              <div class="activity">
+                <h3>Research Projects</h3>
+                <ul>
+                  <li>WBE Roadmap Development</li>
+                  <li>Brain Emulation Challenge</li>
+                  <li>Ethics Framework</li>
+                </ul>
                 <a
-                  href="{{ '/About/DueDiligence' | url }}"
+                  href="{{ '/Research' | url }}"
                   class="emphasized-link"
                   style="color: #c5d9ed"
-                  >read here →</a
+                  >View Research →</a
                 >
-              </p>
+              </div>
+
+              <div class="activity">
+                <h3>Education</h3>
+                <ul>
+                  <li>Technical Workshops</li>
+                  <li>Public Lectures</li>
+                  <li>Learning Resources</li>
+                </ul>
+                <a
+                  href="{{ '/Resources/Learn' | url }}"
+                  class="emphasized-link"
+                  style="color: #c5d9ed"
+                  >Learn More →</a
+                >
+              </div>
+
+              <div class="activity">
+                <h3>Community</h3>
+                <ul>
+                  <li>Discussion Groups</li>
+                  <li>Volunteer Opportunities</li>
+                  <li>Collaboration Network</li>
+                </ul>
+                <a
+                  href="{{ '/Join' | url }}"
+                  class="emphasized-link"
+                  style="color: #c5d9ed"
+                  >Get Involved →</a
+                >
+              </div>
             </div>
           </div>
         </div>
@@ -498,148 +714,40 @@
     <div class="slideshow-container">
       <div class="slides">
         <div class="slide">
-          <div class="slide-content">
-            <div class="slide-text">
-              <h2>Our Mission, Vision, and Impact</h2>
-              <p>
-                "Our mission is to create a world where human consciousness can
-                be transferred to a new substrate, ensuring the continuation of
-                identity and personal experience beyond the biological limits of
-                the human body. We envision a future where humanity has achieved
-                digital immortality, and we are dedicated to developing the
-                science and technology to make this a reality."
-              </p>
-            </div>
-            <div class="slide-image">
-              <img
-                src="{{ 'assets/images/carbongpt-logo.png' | url }}"
-                alt="Mission"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="slide slide--alt">
-          <div class="slide-content">
-            <div class="slide-text">
-              <h2>Our Impact in Numbers</h2>
-              <div class="impact-metrics">
-                <div class="metric-card">
-                  <h3>Collaborations</h3>
-                  <p class="metric">50+</p>
-                </div>
-                <div class="metric-card">
-                  <h3>Workshops</h3>
-                  <p class="metric">100+</p>
-                </div>
-                <div class="metric-card">
-                  <h3>Publications</h3>
-                  <p class="metric">200+</p>
-                </div>
-              </div>
-            </div>
-            <div class="slide-image">
-              <img
-                src="{{ 'assets/images/carbongpt-logo.png' | url }}"
-                alt="Impact"
-              />
-            </div>
-          </div>
+          <img
+            src="{{ 'assets/images/impact-slide-1.png' | url }}"
+            alt="Carboncopies Foundation Impact Statement: Advancing Whole Brain Emulation & Computational Neuroscience"
+          />
         </div>
         <div class="slide">
-          <div class="slide-content">
-            <div class="slide-text">
-              <h2>Your Donation in Action</h2>
-              <p>
-                Your donation is an investment in the future of humanity. It
-                allows us to continue our groundbreaking research, develop new
-                technologies, and build a global community of support for the
-                science of digital immortality.
-              </p>
-              <a href="/legal/google-ads-compliance" class="cta-button"
-                >Learn More</a
-              >
-            </div>
-            <div class="slide-image">
-              <img
-                src="{{ 'assets/images/carbongpt-logo.png' | url }}"
-                alt="Donation"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="slide slide--alt">
-          <div class="slide-content">
-            <div class="slide-text">
-              <h2>Terms of Use</h2>
-              <p>
-                Read our terms of use to understand the rules and guidelines for
-                using our website and services.
-              </p>
-              <a href="/legal/terms-of-use" class="cta-button">Read More</a>
-            </div>
-            <div class="slide-image">
-              <img
-                src="{{ 'assets/images/carbongpt-logo.png' | url }}"
-                alt="Terms of Use"
-              />
-            </div>
-          </div>
+          <img
+            src="{{ 'assets/images/impact-slide-2.png' | url }}"
+            alt="Impact at a Glance: 25+ Workshops Conducted, 12+ Collaborations Established, 10+ Publications Released, 150+ Volunteers Engaged. 'Together, we are working tirelessly to advance whole brain emulation, opening doors to transformative breakthroughs in brain health and more.' – Dr. Randal Koene , Founder , CCF"
+          />
         </div>
         <div class="slide">
-          <div class="slide-content">
-            <div class="slide-text">
-              <h2>Privacy Policy</h2>
-              <p>
-                Your privacy is important to us. Our privacy policy outlines how
-                we collect, use, and protect your personal information.
-              </p>
-              <a href="/legal/privacy-policy" class="cta-button">Read More</a>
-            </div>
-            <div class="slide-image">
-              <img
-                src="{{ 'assets/images/carbongpt-logo.png' | url }}"
-                alt="Privacy Policy"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="slide slide--alt">
-          <div class="slide-content">
-            <div class="slide-text">
-              <h2>Impact Stories</h2>
-              <p>
-                "Carboncopies is at the forefront of a new scientific
-                revolution. Their work is not only groundbreaking but also
-                essential for the future of humanity." - Dr. Jane Doe,
-                Neuroscientist
-              </p>
-            </div>
-            <div class="slide-image">
-              <img
-                src="{{ 'assets/images/carbongpt-logo.png' | url }}"
-                alt="Impact Stories"
-              />
-            </div>
-          </div>
+          <img
+            src="{{ 'assets/images/impact-slide-3.png' | url }}"
+            alt="Resource Allocation Overview: Finances support operations, education, and research. Our team’s effort spans daily contributors, interns, and focused collaborators. Together, they power Carboncopies’ mission."
+          />
         </div>
         <div class="slide">
-          <div class="slide-content">
-            <div class="slide-text">
-              <h2>Transparency and Trust</h2>
-              <p>
-                We are committed to the highest standards of transparency and
-                accountability. We believe that our donors, supporters, and the
-                public have a right to know how we operate and how their
-                contributions are making a difference.
-              </p>
-            </div>
-            <div class="slide-image">
-              <img
-                src="{{ 'assets/images/carbongpt-logo.png' | url }}"
-                alt="Transparency"
-              />
-            </div>
-          </div>
+          <img
+            src="{{ 'assets/images/impact-slide-4.png' | url }}"
+            alt="The Sun Never Sets on the Carboncopies Foundation. Contributors from 5 Continents, Advancing the Mission Around the Clock. Our global community includes: (Computational) Neuroscientists, Programmers, ML / AI, Philosophers (philosophy of mind), Writers, Web developers, Event organizers, Ph.D. Candidates, Interns, Students at every level."
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="{{ 'assets/images/impact-slide-5.png' | url }}"
+            alt="Success Stories & Testimonials: 'Carboncopies was the only organization I came across that approached reverse engineering the brain from first principles of complex, near-critical systems. Their scientific rigor uncovered key problem areas to WBE which in turn guided my career decisions through the neurotech sector.' - Samuel Hosovsky, Entrepreneur and CCF Workshop Attendee. 'I was actively involved with the Carboncopies Foundation, with a particular interest in the ethical challenges posed by future technologies, and also served on the Board for a time. [CCF is] a well-informed, passionate group of individuals dedicated to ensuring that whole brain emulation and related technologies are developed ethically and for the benefit of humanity.' - Angela Thorton, Ph.D., dissertation in partnership with CCF & Horizon, Univ. of Nottingham"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="{{ 'assets/images/impact-slide-6.png' | url }}"
+            alt="Future Goals and Plans: As we continue to grow, our commitment to advancing the community and driving innovation remains stronger than ever. In the coming year, we aim to: Launch & publish our groundbreaking BrainGenix “Brain Emulation Challenge” research platform. Expand our journal clubs and global events to foster deeper knowledge-sharing and collaboration. Launch an open-access Brain Emulation Knowledge Hub to make cutting-edge insights accessible to everyone. Strengthen collaborations with leading research institutions and industry pioneers. Identify and promote more funding opportunities to empower the community and accelerate breakthroughs."
+          />
         </div>
       </div>
       <div class="slide-controls">
@@ -649,7 +757,7 @@
       <div class="slide-dots"></div>
     </div>
   </div>
-</section>
+
 <script>
   const slides = document.querySelector(".slides");
   const slide = document.querySelectorAll(".slide");
@@ -726,6 +834,94 @@
   showSlide(currentIndex);
   startSlideshow();
 </script>
+
+<section class="mdx-container">
+  <div class="md-grid md-typeset">
+<div class="compliance-container">
+    <section class="compliance-hero">
+        <div class="compliance-hero-text">
+            <h2>Impact Statement & Transparency Report</h2>
+            <p> Every contribution, every breakthrough, every step toward whole brain emulation is documented and shared because this journey belongs to all of us.</p>
+        </div>
+        <div class="compliance-hero-image">
+            <img src="/assets/images/impact-slide-1.png" alt="Carboncopies Foundation Impact Statement">
+        </div>
+    </section>
+
+    <section class="compliance-section">
+        <h2>Our Vision and Mission</h2>
+        <p><strong>Our Vision:</strong> An expedited future where whole brain emulation benefits humanity and individuals.</p>
+        <p><strong>Our Mission:</strong> To identify, facilitate, and conduct the research which will deliver whole brain emulation.</p>
+        <p>The Carboncopies Foundation is guided by a steadfast vision of an expedited future where whole brain emulation benefits humanity and individuals. We believe that the possibilities and opportunities presented by the science and technology of whole brain emulation are essential components for the most promising routes to overcoming our greatest challenges and fundamental limitations as a culture, as a society, and as individuals.</p>
+    </section>
+
+    <section class="compliance-section">
+        <h2>Our Impact in Numbers</h2>
+        <div class="impact-metrics">
+            <div class="metric-card">
+                <h3>Collaborations Established</h3>
+                <p class="metric">12+</p>
+                <p>We have partnered with leading universities, research institutions, and technology companies to advance the science of whole-brain emulation.</p>
+            </div>
+            <div class="metric-card">
+                <h3>Workshops Conducted</h3>
+                <p class="metric">25+</p>
+                <p>We have hosted workshops and seminars around the world to educate the public and inspire the next generation of scientists and engineers.</p>
+            </div>
+            <div class="metric-card">
+                <h3>Publications Released</h3>
+                <p class="metric">10+</p>
+                <p>Our researchers have published papers in peer-reviewed journals, sharing our findings with the global scientific community.</p>
+            </div>
+            <div class="metric-card">
+                <h3>Volunteers Engaged</h3>
+                <p class="metric">150+</p>
+                <p>Our global community includes scientists, programmers, writers, event organizers, students, and more, from 5 continents.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="compliance-section">
+        <h2>Your Donation in Action</h2>
+        <p>Your donation is an investment in the future of humanity. It allows us to continue our groundbreaking research, develop new technologies, and build a global community of support for the science of whole brain emulation. With your help, we can unlock the secrets of the human brain and create a world where consciousness is no longer bound by biology.</p>
+        <p>Finances support our three pillars of activity: research, education, and operations. Your contribution powers Carboncopies’ mission to make whole brain emulation a reality.</p>
+        <a href="/Donate/" class="cta-button">Donate Here</a>
+    </section>
+
+    <section class="compliance-section">
+        <h2>Success Stories & Testimonials</h2>
+        <div class="testimonials">
+            <div class="testimonial-card">
+                <p>"Carboncopies was the only organization I came across that approached reverse engineering the brain from first principles of complex, near-critical systems. Their scientific rigor uncovered key problem areas to WBE which in turn guided my career decisions through the neurotech sector."</p>
+                <p class="testimonial-author">- Samuel Hosovsky, <a href="https://www.ucat.app/">Founder of uCat</a> and CCF Workshop Attendee</p>
+            </div>
+            <div class="testimonial-card">
+                <p>"I was actively involved with the Carboncopies Foundation, with a particular interest in the ethical challenges posed by future technologies, and also served on the Board for a time. [CCF is] a well-informed, passionate group of individuals dedicated to ensuring that whole brain emulation and related technologies are developed ethically and for the benefit of humanity."</p>
+                <p class="testimonial-author">- Angela Thorton, Ph.D., dissertation in partnership with CCF & Horizon, Univ. of Nottingham</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="compliance-section">
+        <h2>Our Commitment to Accountability</h2>
+        <p>Trust is earned through action. We maintain rigorous financial oversight, publish our research findings, and provide regular updates on our progress. Our governance practices ensure that every dollar and every effort advances the science of whole brain emulation with integrity and purpose.</p>
+        <div class="legal-links">
+            <a href="/legal/terms-of-use">Terms of Use</a>
+            <a href="/legal/privacy-policy">Privacy Policy</a>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </section>
+</div>
+  </div>
+</section>
+</section>
 
 {% endblock %}
 

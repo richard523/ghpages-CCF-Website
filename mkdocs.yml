@@ -506,7 +506,7 @@ nav:
   - Donate: 
     - Donate: Donate/index.md
 
-  - Legal:
-    - Google Ads Compliance: legal/google-ads-compliance.md
+  # - Legal:
+    - Transparency and Trust: legal/transparency-and-trust.md
     - Terms of Use: legal/terms-of-use.md
     - Privacy Policy: legal/privacy-policy.md
