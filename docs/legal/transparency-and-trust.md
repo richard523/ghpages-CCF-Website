@@ -4,10 +4,6 @@ title: Transparency and Trust
 
 <div class="compliance-container">
     <section class="compliance-hero">
-        <div class="compliance-hero-text">
-            <h1>Transparency and Trust</h1>
-                        <p> Every contribution, every breakthrough, every step toward whole brain emulation is documented and shared because this journey belongs to all of us.</p>
-        </div>
         <div class="compliance-hero-image">
             <img src="/assets/images/impact-slide-1.png" alt="Carboncopies Foundation Impact Statement">
         </div>
