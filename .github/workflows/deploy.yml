@@ -26,7 +26,8 @@ jobs:
         run: ./Build.sh
 
       - name: Configure site_url for deployment
-        run: sed -i 's|site_url: https://carboncopies.org/|site_url: https://richard523.github.io/ghpages-CCF-Website/|' mkdocs.yml
+        run: |
+          sed -i 's|site_url: https://carboncopies.org/|site_url: https://richard523.github.io/ghpages-CCF-Website/|' mkdocs.yml
 
       - name: Deploy to GitHub Pages
         run: mkdocs gh-deploy --force
