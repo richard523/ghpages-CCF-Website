@@ -1,0 +1,10 @@
+
+@media screen and (min-width: 800px) {
+    .md-grid {
+        max-width: 60%; 
+    }
+    
+    .md-sidebar--primary {
+        max-width: 20%;
+    }
+}
